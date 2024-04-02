@@ -6,6 +6,7 @@ import { BehaviorSubject,Observable } from 'rxjs';
 })
 export class BookService {
   private books:BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  private darkMode: boolean = false;
 
   constructor() { }
 
@@ -17,5 +18,14 @@ export class BookService {
     const currentBooks = this.books.value;
     currentBooks.push(book);
     this.books.next(currentBooks);
+  }
+
+  toggleDarkMode = ()  => {
+    return !this.darkMode;
+  }
+
+  isDarkMode = ():boolean => {
+    console.log("Dark mode on")
+    return this.darkMode;
   }
 }

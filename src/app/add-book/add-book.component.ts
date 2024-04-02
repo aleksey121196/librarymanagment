@@ -30,7 +30,11 @@ export class AddBookComponent {
     reader.onload = () => {
       this.newBook.imageUrl = reader.result;
     };
+  }
+
+  showPopUp = () => {
+    alert("Your book added succsessfuly! Thank you!")
+  }
 
   }
 
-}
