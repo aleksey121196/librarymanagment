@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BookService } from '../book.service';
-import { ManegerService } from '../maneger.service';
-
 
 @Component({
   selector: 'app-add-book',
@@ -12,15 +10,27 @@ import { ManegerService } from '../maneger.service';
 export class AddBookComponent {
 
 
-  newBook: any ={name:'',author:'',tags:'',quantity:'',Image:''};
+  newBook: any ={name:'',author:'',tags:'',quantity:'',imageUrl:null};
   constructor(private bookservice:BookService){}
 
   addBook(bookForm:NgForm):void{
     this.bookservice.addBooks(this.newBook);
 
-    this.newBook={name:'',author:'',tags:'',quantity:'',Image:''};
+    this.newBook={name:'',author:'',tags:'',quantity:'',imageUrl:null};
 
     bookForm.resetForm();
+  }
+
+  onFileSelected(event:any):void{
+    const file:File=event.target.files[0];
+    this.newBook.imageUrl=file;
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.newBook.imageUrl = reader.result;
+    };
+
   }
 
 }

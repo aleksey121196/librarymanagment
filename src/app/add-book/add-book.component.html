@@ -21,34 +21,12 @@
 
     <div>
         <label>upload-image</label>
-        <input type="image" [(ngModel)]="newBook.image"  ngModel name="image-input">
+        <input type="file" (change)="onFileSelected($event)"  name="image-input" accept="image/*">
     </div>
 
     <button>add book</button>
 
 </form >
 
-
-   <div>
-        <label>books in the library</label>
-       <input [routerLink]="['/bookss']" routerLinkActive="active" type="button" ngModel name="button-input">
-    </div>
-
-    <div>
-        <label>books out of the library</label>
-        <input type="search" ngModel name="search-input">
-        <button type="button">search</button>
-    </div>
-
-    <div>
-        <label>mode</label>
-        <input type="checkbox" ngModel name="checkbox-input">
-    </div>
-    <div>
-        <a>enter new maneger</a>
-        <label>First Name</label>
-        <input type="text" ngModel name="text-input">
-    </div>
-    <button>add admin</button>
 
 

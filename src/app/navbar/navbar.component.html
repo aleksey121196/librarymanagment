@@ -4,7 +4,12 @@
 
         <li><a routerLink="/" routerLinkActive="active">Home</a></li>
         <li><a routerLink="Add-book" routerLinkActive="active">Add-Book</a></li>
-
+        <li><a routerLink="bookss" routerLinkActive="active" >Library</a></li>
+        <li><a routerLink="Setings" routerLinkActive="active">setings</a></li>
+        <li>
+           <input tipe="text" (ngModel)="searchQuery" placeholder="search.....">
+           <button (click)="search()">search</button>
+        </li>
     </ul>
 
 </div>
