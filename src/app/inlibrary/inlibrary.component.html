@@ -1,0 +1,12 @@
+<div>
+    <ul>
+        <li *ngFor="let book of books$|async">
+            <span>name:{{book.name}}</span><br>
+            <span>author:{{book.author}}</span><br>
+            <span>tags:{{book.tags}}</span><br>
+            <span>quantity:{{book.quantity}}</span><br>
+            <span>image:{{book.image}}</span><br>
+
+        </li>
+    </ul>
+</div>

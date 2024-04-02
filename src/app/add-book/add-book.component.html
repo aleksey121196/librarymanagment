@@ -1,0 +1,54 @@
+<form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)" #form="ngForm" >
+    <div>
+        <label>name</label>
+        <input type="text" [(ngModel)]="newBook.name" ngModel name="name-input" >
+    </div>
+
+    <div>
+        <label>author</label>
+        <input type="text" [(ngModel)]="newBook.author"  ngModel name="author-input">
+    </div>
+
+    <div>
+        <label>tags</label>
+        <input type="text" [(ngModel)]="newBook.tags" ngModel name="tags-input">
+    </div>
+
+    <div>
+        <label>quantity</label>
+        <input type="number" [(ngModel)]="newBook.quantity"  ngModel name="quantity-input">
+    </div>
+
+    <div>
+        <label>upload-image</label>
+        <input type="image" [(ngModel)]="newBook.image"  ngModel name="image-input">
+    </div>
+
+    <button>add book</button>
+
+</form >
+
+
+   <div>
+        <label>books in the library</label>
+       <input [routerLink]="['/bookss']" routerLinkActive="active" type="button" ngModel name="button-input">
+    </div>
+
+    <div>
+        <label>books out of the library</label>
+        <input type="search" ngModel name="search-input">
+        <button type="button">search</button>
+    </div>
+
+    <div>
+        <label>mode</label>
+        <input type="checkbox" ngModel name="checkbox-input">
+    </div>
+    <div>
+        <a>enter new maneger</a>
+        <label>First Name</label>
+        <input type="text" ngModel name="text-input">
+    </div>
+    <button>add admin</button>
+
+
