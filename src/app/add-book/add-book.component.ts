@@ -23,4 +23,8 @@ export class AddBookComponent {
     bookForm.resetForm();
   }
 
+  showPopUp = () => {
+    alert("Your book added succsessfuly! Thank you!")
+  }
+
 }

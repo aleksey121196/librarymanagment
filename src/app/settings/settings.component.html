@@ -1,1 +1,31 @@
-<p>settings works!</p>
+<div>
+    <p>Enter a new manager</p>
+    <label>First Name:</label>
+    <input type="text" placeholder="Enter a name of manager" [(ngModel)]="firstName" name="firstName">
+    <label>Email:</label>
+    <input type="email" placeholder="Enter an email" [(ngModel)]="email" name="email">
+    <label>Last Job Title:</label>
+    <select [(ngModel)]="jobTitle" name="jobTitle">
+        <option disabled selected>Choose a Title</option>
+        <option>Academic Advice</option>
+        <option>Financial Aid</option>
+        <option>Sales</option>
+        <option>Volunteer</option>
+        <option>Laboratory and Research</option>
+    </select>
+</div>
+<button (click)="addManager()">Add Manager</button>
+
+<p>Our Managers:</p>
+<ul>
+  <li *ngFor="let manager of managers">
+    <p>{{ manager.firstName }}</p>
+    <p>{{ manager.email }}</p>
+    <p>{{ manager.jobTitle }}</p>
+  </li>
+</ul>
+
+<input type="checkbox" id="darkModeToggle" [(ngModel)]="darkMode" (change)="toggleDarkMode()">
+
+
+<label for="darkModeToggle">Toggle Dark Mode</label>
