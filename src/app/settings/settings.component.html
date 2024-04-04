@@ -1,5 +1,4 @@
 <div>
-<button>add admin</button>
     <p>Enter a new manager</p>
     <label>First Name:</label>
     <input type="text" placeholder="Enter a name of manager" [(ngModel)]="firstName" name="firstName">
@@ -26,7 +25,6 @@
   </li>
 </ul>
 
-<input type="checkbox" id="darkModeToggle" [(ngModel)]="darkMode" (change)="toggleDarkMode()">
-
-
-<label for="darkModeToggle">Toggle Dark Mode</label>
+<label>
+  <input type="checkbox" (change)="setDarkMode()">
+</label>

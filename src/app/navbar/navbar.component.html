@@ -1,16 +1,12 @@
-<nav class="navigation">
+<nav  [class.dark-mode]="bookService.isDarkModeEnabled()">
 
     <ul>
 
         <li><a routerLink="/" routerLinkActive="active">Home</a></li>
         <li><a routerLink="Add-book" routerLinkActive="active">Add-Book</a></li>
         <li><a routerLink="bookss" routerLinkActive="active" >Library</a></li>
+        <li><a routerLink="out-of-library" routerLinkActive="active">search for books</a></li>
         <li><a routerLink="Setings" routerLinkActive="active">setings</a></li>
-        <li>
-           <input tipe="text" (ngModel)="searchQuery" placeholder="search.....">
-           <button (click)="search()">search</button>
-        </li>
-
     </ul>
 
 </nav>

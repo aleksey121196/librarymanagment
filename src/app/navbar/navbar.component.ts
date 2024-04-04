@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchService } from '../search.service';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,20 +7,6 @@ import { SearchService } from '../search.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
-  searchQuery:string = '';
-  searchResults:any[]=[];
-
-  constructor(private searchService:SearchService){}
-
-  search():void{
-    if(this.searchQuery.trim()){
-      this.searchService.search(this.searchQuery).subscribe(results =>{
-        this.searchResults=results.items;
-      });
-    }else{
-      this.searchResults=[];
-    }
-  }
+  constructor(public bookService: BookService) {}
 
 }

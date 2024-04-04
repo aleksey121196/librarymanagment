@@ -8,7 +8,6 @@ import { BookService } from '../book.service';
 })
 export class SettingsComponent {
 
-  darkMode: boolean;
   count: number = 0;
   userEmail: string = '';
   managers: any[] = [];
@@ -16,17 +15,9 @@ export class SettingsComponent {
   email: string = '';
   jobTitle: string = '';
 
-
-  constructor(private bookService: BookService){
-    this.darkMode = this.bookService.toggleDarkMode();
+  constructor(public bookService: BookService){
   }
 
-  toggleDarkMode = () => {  
-    this.darkMode = !this.darkMode;
-    console.log(this.darkMode)
-    this.bookService.toggleDarkMode();
-    console.log("Dark mode stopped")
-  }
 
   addManager = () => {
     this.count++;
@@ -45,5 +36,12 @@ export class SettingsComponent {
     if(this.count>2){
       alert("Only 2 managers can be added! You exceed the allowed amount!")
     }
+
   }
+
+  setDarkMode(): void {
+    this.bookService.toggleDarkMode();
+  }
+
+ 
 }

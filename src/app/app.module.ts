@@ -11,8 +11,11 @@ import { OutlibraryComponent } from './outlibrary/outlibrary.component';
 import { SettingsComponent } from './settings/settings.component';
 
 import { FormsModule } from '@angular/forms';
-import { ManegerComponent } from './maneger/maneger.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { BookService } from './book.service';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     InlibraryComponent,
     OutlibraryComponent,
     SettingsComponent,
-    ManegerComponent
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule  {
+ }

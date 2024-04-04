@@ -22,8 +22,7 @@
     <div>
         <label>upload-image</label>
         <input type="file" (change)="onFileSelected($event)"  name="image-input" accept="image/*">
-        <label>Upload Image</label>
-        <input type="image" [(ngModel)]="newBook.image"  ngModel name="image-input">
+       
     </div>
 
     <button (click)="showPopUp()">Add Book</button>
