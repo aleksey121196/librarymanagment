@@ -1,31 +1,31 @@
-<form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)" #form="ngForm" >
-    <div>
+<form class="form-container" #bookForm="ngForm" (ngSubmit)="addBook(bookForm)" #form="ngForm" >
+    <div class="feeld">
         <label>Name of a book</label>
         <input type="text" placeholder="Enter a name of a book" [(ngModel)]="newBook.name" ngModel name="name-input" >
     </div>
 
-    <div>
+    <div class="feeld">
         <label>Author's Name</label>
         <input type="text" placeholder="Enter author's name" [(ngModel)]="newBook.author"  ngModel name="author-input">
     </div>
 
-    <div>
+    <div class="feeld">
         <label>Tags</label>
         <input type="text" placeholder="Enter tags" [(ngModel)]="newBook.tags" ngModel name="tags-input">
     </div>
 
-    <div>
+    <div class="feeld">
         <label>Quantity</label>
         <input type="number" placeholder="Choose quantity" [(ngModel)]="newBook.quantity"  ngModel name="quantity-input">
     </div>
 
-    <div>
+    <div class="feeld">
         <label>upload-image</label>
         <input type="file" (change)="onFileSelected($event)"  name="image-input" accept="image/*">
        
     </div>
 
-    <button (click)="showPopUp()">Add Book</button>
+    <button class="dmb" (click)="showPopUp()">Add Book</button>
 
 </form >
 

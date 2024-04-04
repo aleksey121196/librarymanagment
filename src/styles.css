@@ -3,3 +3,353 @@
   background-color: #333; /* Dark background color */
   color: #fff; /* Light text color */
 }
+/*--------------------------------------------------------------*/
+/* Outer container */
+.outer-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Image container */
+.image {
+  flex: 0 0 30%; /* Adjust the width as needed */
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Vertical line */
+.image::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc; /* Adjust the color as needed */
+  margin: 0 auto;
+}
+
+/* Text container */
+.text {
+  flex: 0 0 60%; /* Adjust the width as needed */
+  padding: 0 20px; /* Adjust the spacing between image and text */
+}
+
+.text .a1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.text .p1 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/*--------------------------------------------------------------*/
+
+/* Form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* Adjust the width as needed */
+}
+
+/* Form fields */
+.feeld {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.feeld label {
+  display: inline-block;
+  width: 100px; /* Adjust the width as needed */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Text color for labels */
+}
+
+.feeld input[type="text"],
+.feeld input[type="number"],
+.feeld input[type="file"] {
+  width: calc(100% - 110px); /* Adjust the width as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.feeld input[type="text"]:focus,
+.feeld input[type="number"]:focus,
+.feeld input[type="file"]:focus {
+  outline: none;
+  border-color: #007bff; /* Adjust the color as needed */
+}
+
+/* Button */
+.dmb {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #007bff; /* Adjust the color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dmb:hover {
+  background-color: #0056b3; /* Adjust the color as needed */
+}
+
+/*--------------------------------------------------------------*/
+
+/* Book list container */
+.book-list {
+  padding: 20px;
+}
+
+/* Unordered list */
+.il1 {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* List item */
+.li1 {
+  margin-bottom: 20px;
+}
+
+/* Span elements */
+.sp {
+  display: block;
+  font-weight: bold;
+}
+
+/* Image */
+.img2 {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+
+/*--------------------------------------------------------------*/
+
+
+.nav-container {
+  background-color: #f0f0f0; /* Background color of the navigation container */
+  padding: 10px; /* Padding around the navigation container */
+}
+
+.nv {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.ul4 {
+  display: flex; /* Use flexbox layout for the list items */
+}
+
+.ul4 li {
+  margin-right: 20px; /* Adjust spacing between list items */
+}
+
+.ul4 li:last-child {
+  margin-right: 0; /* Remove margin from the last list item */
+}
+
+.ul4 li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color of links */
+  font-size: 16px; /* Font size of links */
+  font-weight: bold; /* Bold font weight for links */
+}
+
+.ul4 li a.active {
+  color: #007bff; /* Active link color */
+}
+
+.ul4 {
+  display: flex;
+  list-style-type: none; /* Remove the dots */
+}
+
+.ul4 li {
+  margin-right: 20px;
+}
+
+.ul4 li:last-child {
+  margin-right: 0;
+}
+
+.dark-mode .nav-container {
+  background-color: #333; /* Dark mode: Background color of the navigation container */
+}
+
+.dark-mode .ul4 li a {
+  color: #fff; /* Dark mode: Text color of links */
+}
+
+/*------------------------------------------------------*/
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container h1.h7 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.search-container input[type="text"] {
+  width: 280px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-container button.bbb {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.dd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+}
+
+.book img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.book h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.p3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+/*-------------------------------------*/
+
+.form-container {
+  margin-bottom: 20px; /* Add margin to separate from other content */
+}
+
+.p98 {
+  font-size: 20px; /* Increase font size */
+  margin-bottom: 10px; /* Add margin to separate from other content */
+  color: #333; /* Dark gray color */
+}
+
+.ul0 {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove default padding */
+}
+
+.li0 {
+  margin-bottom: 10px; /* Add margin between list items */
+}
+
+.p00 {
+  margin: 0; /* Remove default margin */
+}
+
+.dfdm {
+  margin-top: 20px; /* Add margin to separate from other content */
+}
+
+label {
+  margin-right: 10px; /* Add margin between checkbox and label */
+  color: #333; /* Dark gray color */
+}
+
+button[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px; /* Add margin at the top */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%; /* Make inputs and select full width */
+  padding: 10px; /* Add padding */
+  margin-bottom: 10px; /* Add margin at the bottom */
+  box-sizing: border-box; /* Include padding and border in the width */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+/* Adjust colors of specific elements in dark mode */
+.dark-mode .ul0,
+.dark-mode .li0,
+.dark-mode label,
+.dark-mode .p98,
+.dark-mode .p00 ,
+.dark-mode .h7
+{
+  color: #fff; /* Set text color to white in dark mode */
+}
+

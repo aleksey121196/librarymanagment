@@ -1,11 +1,11 @@
-<div>
-    <ul>
-        <li *ngFor="let book of books$|async">
-            <span>name:{{book.name}}</span><br>
-            <span>author:{{book.author}}</span><br>
-            <span>tags:{{book.tags}}</span><br>
-            <span>quantity:{{book.quantity}}</span><br>
-            <img [src]="book.imageUrl" alt="Book Image">
+<div class="book-list">
+    <ul class="il1">
+        <li class="li1" *ngFor="let book of books$|async">
+            <span class="sp">name:{{book.name}}</span><br>
+            <span class="sp">author:{{book.author}}</span><br>
+            <span class="sp">tags:{{book.tags}}</span><br>
+            <span class="sp">quantity:{{book.quantity}}</span><br>
+            <img class="img2" [src]="book.imageUrl" alt="Book Image">
 
         </li>
     </ul>

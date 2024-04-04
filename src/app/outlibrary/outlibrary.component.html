@@ -1,18 +1,19 @@
-<div>
+<div class="search-container">
+  <h1 class="h7">Search For New Books</h1>
     <input type="text" [(ngModel)]="searchQuery" placeholder="Search for books...">
-    <button (click)="search()">Search</button>
+    <button class="bbb" (click)="search()">Search</button>
   </div>
   
   <div *ngIf="error" class="error">{{ error }}</div>
   
-  <div *ngIf="searchResults.length > 0">
+  <div class="dd" *ngIf="searchResults.length > 0">
     <div *ngFor="let book of searchResults" class="book">
-      <img [src]="book.volumeInfo.imageLinks?.thumbnail || 'path_to_placeholder_image'" alt="Book Cover">
+      <img class="img" [src]="book.volumeInfo.imageLinks?.thumbnail || 'path_to_placeholder_image'" alt="Book Cover">
 
       <h3>{{ book.volumeInfo.title }}</h3>
-      <p>Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
-      <p>Publisher: {{ book.volumeInfo.publisher }}</p>
-      <p>Published Date: {{ book.volumeInfo.publishedDate }}</p>
+      <p class="p3">Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
+      <p class="p3">Publisher: {{ book.volumeInfo.publisher }}</p>
+      <p class="p3">Published Date: {{ book.volumeInfo.publishedDate }}</p>
     </div>
   </div>
   

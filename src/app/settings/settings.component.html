@@ -1,13 +1,12 @@
-<div>
-    <p>Enter a new manager</p>
-  <p>Add New Manager:</p>
+<div class="form-container">
+  <p class="p98">Add New Manager:</p>
   <form #managerForm="ngForm" class="form-container" (ngSubmit)="addManager(managerForm)">
     <label>First Name:</label>
     <input type="text" placeholder="Enter a name of manager" [(ngModel)]="newManager.firstName" name="firstName">
     <label>Email:</label>
     <input type="email" placeholder="Enter an email" [(ngModel)]="newManager.email" name="email">
     <label>Last Job Title:</label>
-    <select (ngModel)="newManager.jobTitle" name="jobTitle">
+    <select [(ngModel)]="newManager.jobTitle" name="jobTitle">
       <option disabled selected>Choose a Title</option>
       <option>Academic Advice</option>
       <option>Financial Aid</option>
@@ -19,17 +18,21 @@
   </form>
 </div>
 
-<p>Our Managers:</p>
-<ul>
-  <li *ngFor="let manager of managers">
-    <p>{{ manager.firstName }}</p>
-    <p>{{ manager.email }}</p>
-    <p>{{ manager.jobTitle }}</p>
+<div class="form-container">
+<p class="p98">Our Managers:</p>
+<ul class="ul0">
+  <li class="li0" *ngFor="let manager of managers">
+    <p class="p00">{{ manager.firstName }}</p>
+    <p class="p00">{{ manager.email }}</p>
+    <p class="p00">{{ manager.jobTitle }}</p>
   </li>
 </ul>
+</div>
 
+<div class="dfdm">
 <label>
   <input type="checkbox" (change)="setDarkMode()">
 </label>
 
 <label for="darkModeToggle"> Dark Mode</label>
+</div>
