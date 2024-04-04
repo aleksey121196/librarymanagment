@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgToastModule } from 'ng-angular-popup'
 
 import { BookService } from './book.service';
 
@@ -32,7 +33,8 @@ import { BookService } from './book.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { BookService } from '../book.service';
+
 
 @Component({
   selector: 'app-settings',
@@ -7,41 +8,42 @@ import { BookService } from '../book.service';
   styleUrls:['./settings.component.css'] 
 })
 export class SettingsComponent {
-
-  count: number = 0;
-  userEmail: string = '';
+  
+  darkMode: boolean;
+  newManager = {
+    firstName: '',
+    email: '',
+    jobTitle: ''
+  };
   managers: any[] = [];
-  firstName: string = '';
-  email: string = '';
-  jobTitle: string = '';
+  allManagers: any[] = [];
 
-  constructor(public bookService: BookService){
+  count:number = 0;
+  
+  constructor(private bookService: BookService){
+    this.darkMode = false;
   }
 
-
-  addManager = () => {
-    this.count++;
-    if(this.count<=2){
-      const manager = {
-        firstName: this.firstName,
-        email: this.email,
-        jobTitle: this.jobTitle
-      };
-      this.managers.push(manager);
-      this.firstName = '';
-      this.email = '';
-      this.jobTitle = '';
-      alert("Manager added succsessfuly! Permitions of a new manager are updated.")
+  addManager(managerForm: any) {
+    if (managerForm.valid) {
+      this.count++;
+      if(this.count<=2){
+        this.managers.push({...this.newManager}); // Adding new manager to the array
+        // Resetting form after adding manager
+        managerForm.resetForm();
+        alert("Maneger added succsessfuly!")
+      }
+      if(this.count>2){
+        alert("You cannot add more than 2 manegers!")
+        managerForm.resetForm();
+      }
+      
     }
-    if(this.count>2){
-      alert("Only 2 managers can be added! You exceed the allowed amount!")
-    }
-
   }
-
+  
   setDarkMode(): void {
     this.bookService.toggleDarkMode();
   }
-
  
+  
 }

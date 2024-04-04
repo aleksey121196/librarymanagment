@@ -8,6 +8,7 @@
   <div *ngIf="searchResults.length > 0">
     <div *ngFor="let book of searchResults" class="book">
       <img [src]="book.volumeInfo.imageLinks?.thumbnail || 'path_to_placeholder_image'" alt="Book Cover">
+
       <h3>{{ book.volumeInfo.title }}</h3>
       <p>Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
       <p>Publisher: {{ book.volumeInfo.publisher }}</p>

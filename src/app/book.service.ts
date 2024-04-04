@@ -47,4 +47,5 @@ export class BookService {
   isDarkModeEnabled = (): boolean=>{
     return this.isDarkMode;
   }
+  
 }
