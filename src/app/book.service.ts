@@ -19,13 +19,5 @@ export class BookService {
     currentBooks.push(book);
     this.books.next(currentBooks);
   }
-
-  toggleDarkMode = ()  => {
-    return !this.darkMode;
-  }
-
-  isDarkMode = ():boolean => {
-    console.log("Dark mode on")
-    return this.darkMode;
-  }
+  
 }
