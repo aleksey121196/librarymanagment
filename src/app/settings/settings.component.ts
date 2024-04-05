@@ -16,8 +16,6 @@ export class SettingsComponent {
     jobTitle: ''
   };
   managers: any[] = [];
-  allManagers: any[] = [];
-
   count:number = 0;
   
   constructor(private bookService: BookService){
@@ -28,8 +26,7 @@ export class SettingsComponent {
     if (managerForm.valid) {
       this.count++;
       if(this.count<=2){
-        this.managers.push({...this.newManager}); // Adding new manager to the array
-        // Resetting form after adding manager
+        this.managers.push({...this.newManager}); 
         managerForm.resetForm();
         alert("Maneger added succsessfuly!")
       }

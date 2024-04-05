@@ -1,22 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService } from '../book.service';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
 
 
-constructor (private bookService: BookService){
+constructor (){
 
 } 
 
 
-ngOnInit(): void{
 
-}
 
 }
